@@ -1,0 +1,81 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main () {
+system ("color F0");
+    int opcion, n1, , p;
+
+    cout<<"1. Mostrar si un numero es primo."<<endl<<"2. Mostrar el factorial de un numero."<<endl<<"3.Leer calificaciones"<<endl<<"0. SALIR"<<endl;
+    cin>>opcion;
+
+    if(opcion==1)
+    {
+        cout<<"Ingrese un numero para identificar si es primo:"<<endl;
+        cin>>n1;
+
+        for(int i=1;i<(n1+1);i++)
+        {
+            if(n1%i==0)
+            {
+                p++;
+            }
+        }
+        if(p!=2)
+        {
+            cout<<"No es primo"<<endl;
+        }
+        else
+        {
+            cout<<"Es primo"<<endl;
+        }
+    }
+        else if(opcion==2)
+            {
+                int n2, factorial=1;
+
+            cout<<"Ingrese un numero para determinar si es factorial:"<<endl;
+            cin>>n2;
+
+            for(int i=1; i<=n2 ;i++)
+            {
+
+
+
+
+                factorial*=i;
+            }
+           cout<<"El factorial es: "<<factorial<<endl;
+
+            }
+            else if(opcion==3)
+            {
+                float n3, contador=0, suma=0, promedio;
+
+                do
+                {
+                    cout<<"Ingresa calificaciones para obtener el promedio"<<endl;
+                    cin>>n3;
+                    suma+=n3;
+                    contador++;
+                }
+                while(n3!=-1);
+                contador+=-1;
+                suma+=1;
+                promedio=suma/contador;
+
+                cout<<"El promedio es:"<<promedio<<endl;
+            }
+            else if(opcion==0)
+            {
+                cout<<"HASTA PRONTO"<<endl;
+            }
+
+
+
+    return 0;
+}
+
+
+
+
+
